@@ -64,5 +64,6 @@ footer {
 .contenedor-imagenes img {
   max-width: 45%;
   border-radius: 8px;
+  object-fit: contain;
   height: auto;
 }
