@@ -5,45 +5,205 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pablo Nadal - Portafolio</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-  <header>
-    <h1>Pablo Nadal Balastegui</h1>
-    <p>Desarrollador Python | Ingeniero Informático | Data engineer + Analyst</p>
-    <nav>
-      <a href="#proyectos">Proyectos</a>
-      <a href="assets/cv.pdf" target="_blank">CV</a>
-      <a href="https://github.com/pablonadal" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/nadal-balastegui-ab0563224/" target="_blank">LinkedIn</a>
-    </nav>
-  </header>
-
-  <main>
-    <section id="intro">
-      <h2>Sobre mí</h2>
-      <p>Soy un apasionado por la tecnología, con experiencia en análisis de datos, automatización de procesos y desarrollo de soluciones que combinan Python, Power BI y APIs. Este sitio muestra algunos de mis proyectos más destacados.</p>
-    </section>
-
-    <section id="proyectos">
-      <h2>Proyectos</h2>
-
-      <div class="proyecto-card">
-        <img class="img-reducida" src="assets/img/CTNET_3.png" alt="Control y seguimiento automatizado de rutas de trabajo">
-        <h3>Control y seguimiento automatizado de rutas de trabajo</h3>
-        <p>Visualización de recorridos y métricas de trabajo para equipos técnicos, usando Power BI y automatización ETL en Python.</p>
-        <a href="proyectos/dashboard-rutas.html">Ver más</a>
+  <!-- Navegación fija -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-text">PN</span>
       </div>
-      <div class="proyecto-card">
-        <img class="img-reducida" src="assets/img/logo_smart_rute.png" alt="Control y seguimiento automatizado de rutas de trabajo">
-        <h3>Ordenamiento inteligente de rutas y notificaciones automáticas</h3>
-        <p>Asignación automática de recorridos según móviles disponibles y distancias, con predicción del tiempo de llegada y envío de notificaciones por WhatsApp a los choferes y correos personalizados a los clientes.</p>
-        <a href="proyectos/ruteo-inteligente.html">Ver más</a>
+      <div class="nav-links">
+        <a href="#inicio" class="nav-link">Inicio</a>
+        <a href="#sobre-mi" class="nav-link">Sobre mí</a>
+        <a href="#proyectos" class="nav-link">Proyectos</a>
+        <a href="#contacto" class="nav-link">Contacto</a>
       </div>
-    </section>
-  </main>
+      <div class="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
 
-  <footer>
-    <p>© 2025 Pablo Nadal</p>
+  <!-- Hero Section -->
+  <section id="inicio" class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">
+          <span class="gradient-text">Pablo Nadal</span>
+          <span class="hero-subtitle">Balastegui</span>
+        </h1>
+        <p class="hero-description">
+          Desarrollador Python | Ingeniero Informático | Data Engineer + Analyst
+        </p>
+        <div class="hero-buttons">
+          <a href="#proyectos" class="btn btn-primary">Ver Proyectos</a>
+          <a href="assets/cv.pdf" target="_blank" class="btn btn-secondary">
+            <i class="fas fa-download"></i> Descargar CV
+          </a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="floating-card">
+          <i class="fas fa-code"></i>
+        </div>
+        <div class="floating-card">
+          <i class="fas fa-chart-line"></i>
+        </div>
+        <div class="floating-card">
+          <i class="fas fa-database"></i>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- Sobre mí -->
+  <section id="sobre-mi" class="about">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="title-accent">Sobre</span> mí
+      </h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p class="about-description">
+            Soy un apasionado por la tecnología, con experiencia en análisis de datos, 
+            automatización de procesos y desarrollo de soluciones que combinan Python, 
+            Power BI y APIs. Este sitio muestra algunos de mis proyectos más destacados.
+          </p>
+          <div class="skills">
+            <div class="skill-item">
+              <i class="fab fa-python"></i>
+              <span>Python</span>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-chart-bar"></i>
+              <span>Power BI</span>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-database"></i>
+              <span>Data Analysis</span>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-cogs"></i>
+              <span>Automation</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card">
+            <div class="stat-number">3+</div>
+            <div class="stat-label">Años de experiencia</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">10+</div>
+            <div class="stat-label">Proyectos completados</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proyectos -->
+  <section id="proyectos" class="projects">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="title-accent">Mis</span> Proyectos
+      </h2>
+      <div class="projects-grid">
+        <div class="project-card" data-aos="fade-up">
+          <div class="project-image">
+            <img src="assets/img/CTNET_3.png" alt="Control y seguimiento automatizado de rutas de trabajo">
+            <div class="project-overlay">
+              <div class="project-tech">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Power BI</span>
+                <span class="tech-tag">ETL</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Control y seguimiento automatizado de rutas de trabajo</h3>
+            <p class="project-description">
+              Visualización de recorridos y métricas de trabajo para equipos técnicos, 
+              usando Power BI y automatización ETL en Python.
+            </p>
+            <div class="project-links">
+              <a href="proyectos/dashboard-rutas.html" class="project-link">
+                <i class="fas fa-external-link-alt"></i>
+                Ver más
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-image">
+            <img src="assets/img/logo_smart_rute.png" alt="Ordenamiento inteligente de rutas">
+            <div class="project-overlay">
+              <div class="project-tech">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">WhatsApp API</span>
+                <span class="tech-tag">Optimización</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Ordenamiento inteligente de rutas y notificaciones automáticas</h3>
+            <p class="project-description">
+              Asignación automática de recorridos según móviles disponibles y distancias, 
+              con predicción del tiempo de llegada y envío de notificaciones por WhatsApp 
+              a los choferes y correos personalizados a los clientes.
+            </p>
+            <div class="project-links">
+              <a href="proyectos/ruteo-inteligente.html" class="project-link">
+                <i class="fas fa-external-link-alt"></i>
+                Ver más
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="contact">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="title-accent">Conectemos</span>
+      </h2>
+      <div class="contact-content">
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fab fa-github"></i>
+            <a href="https://github.com/pablonadal" target="_blank">GitHub</a>
+          </div>
+          <div class="contact-item">
+            <i class="fab fa-linkedin"></i>
+            <a href="https://www.linkedin.com/in/nadal-balastegui-ab0563224/" target="_blank">LinkedIn</a>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>pablo.nadal@email.com</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Pablo Nadal. Hecho con ❤️ y mucho código.</p>
+    </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

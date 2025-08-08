@@ -3,57 +3,261 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dashboard de Rutas</title>
+  <title>Sistema de Ruteo Inteligente - Pablo Nadal</title>
   <link rel="stylesheet" href="../style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="proyecto-styles.css" />
 </head>
 <body>
-  <header>
-    <h1>Sistema de Ruteo Inteligente</h1>
-    <p>Proyecto de ordenamiento de rutas y notificaciones automáticas</p>
-    <nav>
-      <a href="../index.html">Volver al inicio</a>
-    </nav>
-  </header>
-
-  <main>
-    <section>
-      <h2>Descripción</h2>
-      <p>Sistema inteligente que optimiza rutas de trabajo según la cantidad de móviles y distancias a recorrer, predice tiempos de llegada considerando la actividad a realizar, y envía notificaciones automáticas por WhatsApp a los choferes y por email a los clientes con el horario estimado de visita.</p>
-    </section>
-
-    <section>
-      <h2>Tecnologías utilizadas</h2>
-      <ul>
-        <li>Gmail API</li>
-        <li>Python</li>
-        <li>Google Maps API</li>
-        <li>OR-Tools</li>
-        <li>FastAPI</li>
-        <li>WhatsApp API</li>
-        <li>Pandas</li>
-        <li>PostgreSQL</li>
-      </ul>
-    </section>
-
-    <section>
-      <h1>Capturas </h1>
-      <p>En las siguientes capturas se ilustran los mensajes enviados al iniciar la jornada, tanto a los clientes (por correo electrónico) como a los técnicos en campo (a través de WhatsApp).</p>
-      <h3>Arquitectura del sistema</h3>
-      <img src="../assets/img/arquitectura_smart_rute.png" alt="Captura del dashboard" style="max-width:100%;border-radius:8px;">
-      <h3>Mensaje de ruta de trabajo a tecnico por WhatsApp + captura de pantalla de ruta creada</h3>
-      <div class="contenedor-imagenes">
-        <img src="../assets/img/captura_mensaje_de_ruta_de_wsp.png" alt="Captura de rutas de trabajo">
-        <img src="../assets/img/Captura_de_ruta_en_maps.png" alt="Otra imagen de rutas">
+  <!-- Navegación -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <a href="../index.html" class="logo-text">PN</a>
       </div>
-      <h4>Mensajes enviados a clientes</h4>
-      <div class="contenedor-imagenes">
-        <img src="../assets/img/captura_mensajes_email.png" alt="Captura de rutas de trabajo">
+      <div class="nav-links">
+        <a href="../index.html" class="nav-link">
+          <i class="fas fa-home"></i> Inicio
+        </a>
+        <a href="../index.html#proyectos" class="nav-link">
+          <i class="fas fa-code"></i> Proyectos
+        </a>
       </div>
-    </section>
-  </main>
+    </div>
+  </nav>
 
-  <footer>
-    <p>© 2025 Pablo Nadal</p>
+  <!-- Hero del proyecto -->
+  <section class="project-hero">
+    <div class="container">
+      <div class="project-hero-content">
+        <div class="project-hero-text">
+          <div class="project-badge">
+            <i class="fas fa-route"></i>
+            <span>Sistema Inteligente</span>
+          </div>
+          <h1 class="project-title">Sistema de Ruteo Inteligente</h1>
+          <p class="project-subtitle">Optimización automática de rutas y notificaciones inteligentes para equipos de campo</p>
+          <div class="project-meta">
+            <div class="meta-item">
+              <i class="fas fa-calendar"></i>
+              <span>2024</span>
+            </div>
+            <div class="meta-item">
+              <i class="fas fa-clock"></i>
+              <span>4 meses</span>
+            </div>
+            <div class="meta-item">
+              <i class="fas fa-users"></i>
+              <span>Equipo técnico</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-hero-visual">
+          <div class="project-preview">
+            <img src="../assets/img/logo_smart_rute.png" alt="Sistema de Ruteo Preview">
+            <div class="preview-overlay">
+              <i class="fas fa-play"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Descripción del proyecto -->
+  <section class="project-description">
+    <div class="container">
+      <div class="description-grid">
+        <div class="description-content">
+          <h2 class="section-title">
+            <span class="title-accent">Descripción</span> del Proyecto
+          </h2>
+          <p class="description-text">
+            Sistema inteligente que optimiza rutas de trabajo según la cantidad de móviles y distancias a recorrer, predice tiempos de llegada considerando la actividad a realizar, y envía notificaciones automáticas por WhatsApp a los choferes y por email a los clientes con el horario estimado de visita.
+          </p>
+          <div class="project-features">
+            <div class="feature-item">
+              <i class="fas fa-route"></i>
+              <div>
+                <h4>Optimización de Rutas</h4>
+                <p>Algoritmos inteligentes para minimizar distancias y tiempos</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <i class="fab fa-whatsapp"></i>
+              <div>
+                <h4>Notificaciones Automáticas</h4>
+                <p>Mensajes automáticos por WhatsApp a técnicos</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h4>Comunicación con Clientes</h4>
+                <p>Emails personalizados con horarios estimados</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-clock"></i>
+              <div>
+                <h4>Predicción de Tiempos</h4>
+                <p>Estimación precisa de llegada considerando actividades</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tech-stack">
+          <h3 class="tech-title">Tecnologías Utilizadas</h3>
+          <div class="tech-grid">
+            <div class="tech-item">
+              <i class="fas fa-envelope"></i>
+              <span>Gmail API</span>
+            </div>
+            <div class="tech-item">
+              <i class="fab fa-python"></i>
+              <span>Python</span>
+            </div>
+            <div class="tech-item">
+              <i class="fas fa-map-marked-alt"></i>
+              <span>Google Maps API</span>
+            </div>
+            <div class="tech-item">
+              <i class="fas fa-cogs"></i>
+              <span>OR-Tools</span>
+            </div>
+            <div class="tech-item">
+              <i class="fas fa-rocket"></i>
+              <span>FastAPI</span>
+            </div>
+            <div class="tech-item">
+              <i class="fab fa-whatsapp"></i>
+              <span>WhatsApp API</span>
+            </div>
+            <div class="tech-item">
+              <i class="fas fa-table"></i>
+              <span>Pandas</span>
+            </div>
+            <div class="tech-item">
+              <i class="fas fa-database"></i>
+              <span>PostgreSQL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galería de capturas -->
+  <section class="project-gallery">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="title-accent">Capturas</span> del Proyecto
+      </h2>
+      <p class="gallery-description">
+        En las siguientes capturas se ilustran los mensajes enviados al iniciar la jornada, tanto a los clientes (por correo electrónico) como a los técnicos en campo (a través de WhatsApp).
+      </p>
+      
+      <div class="gallery-grid">
+        <div class="gallery-item featured">
+          <div class="gallery-image">
+            <img src="../assets/img/arquitectura_smart_rute.png" alt="Arquitectura del sistema">
+            <div class="image-overlay">
+              <div class="overlay-content">
+                <h4>Arquitectura del Sistema</h4>
+                <p>Diagrama completo de la infraestructura del sistema</p>
+                <button class="view-btn" onclick="openLightbox(this)">
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-section">
+          <h3 class="gallery-section-title">
+            <i class="fab fa-whatsapp"></i>
+            Mensajes de Ruta por WhatsApp
+          </h3>
+          <div class="gallery-row">
+            <div class="gallery-item">
+              <div class="gallery-image">
+                <img src="../assets/img/captura_mensaje_de_ruta_de_wsp.png" alt="Mensaje WhatsApp">
+                <div class="image-overlay">
+                  <button class="view-btn" onclick="openLightbox(this)">
+                    <i class="fas fa-expand"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <div class="gallery-image">
+                <img src="../assets/img/Captura_de_ruta_en_maps.png" alt="Ruta en Maps">
+                <div class="image-overlay">
+                  <button class="view-btn" onclick="openLightbox(this)">
+                    <i class="fas fa-expand"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-section">
+          <h3 class="gallery-section-title">
+            <i class="fas fa-envelope"></i>
+            Mensajes Enviados a Clientes
+          </h3>
+          <div class="gallery-item">
+            <div class="gallery-image">
+              <img src="../assets/img/captura_mensajes_email.png" alt="Mensajes email">
+              <div class="image-overlay">
+                <div class="overlay-content">
+                  <h4>Comunicación Automática</h4>
+                  <p>Emails personalizados con horarios estimados</p>
+                  <button class="view-btn" onclick="openLightbox(this)">
+                    <i class="fas fa-expand"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-content">
+      <button class="lightbox-close" onclick="closeLightbox()">
+        <i class="fas fa-times"></i>
+      </button>
+      <img src="" alt="" class="lightbox-image">
+      <div class="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-nav">
+          <a href="dashboard-rutas.html" class="footer-link">
+            <i class="fas fa-arrow-left"></i>
+            Proyecto Anterior
+          </a>
+          <a href="../index.html" class="footer-link">
+            Volver al Portafolio
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+        <p>&copy; 2025 Pablo Nadal. Hecho con ❤️ y mucho código.</p>
+      </div>
+    </div>
   </footer>
+
+  <script src="../script.js"></script>
+  <script src="proyecto-script.js"></script>
 </body>
 </html>

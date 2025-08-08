@@ -3,61 +3,296 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dashboard de Rutas</title>
+  <title>Dashboard de Rutas - Pablo Nadal</title>
   <link rel="stylesheet" href="../style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="proyecto-styles.css" />
 </head>
 <body>
-  <header>
-    <h1>Dashboard de Rutas de Trabajo</h1>
-    <p>Proyecto de visualización de datos con Power BI</p>
-    <nav>
-      <a href="../index.html">Volver al inicio</a>
-    </nav>
-  </header>
-
-  <main>
-    <section>
-      <h2>Descripción</h2>
-      <p>Este proyecto consiste en el desarrollo de un dashboard interactivo con Power BI, diseñado para visualizar y analizar las rutas de trabajo efectivamente realizadas por los equipos técnicos. A través de la comparación entre estas rutas reales y las rutas óptimas definidas por Google Maps, la herramienta permite identificar ineficiencias logísticas y estimar el desperdicio de combustible generado por desvíos innecesarios o decisiones subjetivas en el recorrido.</p>
-    </section>
-
-    <section>
-      <h2>Tecnologías utilizadas</h2>
-      <ul>
-        <li>Power BI</li>
-        <li>Python (ETL)</li>
-        <li>Google Maps API</li>
-        <li>MyGeotab</li>
-        <li>Pandas</li>
-        <li>SQL</li>
-      </ul>
-    </section>
-
-    <section>
-      <h1>Capturas </h1>
-      <p>En esta sección se muestran capturas del dashboard y de las rutas de trabajo, tanto reales como óptimas, junto con ejemplos de selección de móviles y filtros de fecha.</p>
-      <h3>Dashboard principal</h3>
-      <img src="../assets/img/Captura_tablero_distancia_real_vs_optima_difuminado.png" alt="Captura del dashboard" style="max-width:100%;border-radius:8px;">
-      <h3>Rutas de trabajo mediante URLs</h3>
-      <h4>URLs MyGeotab (Ruta real)</h4>
-      <div class="contenedor-imagenes">
-        <img src="../assets/img/Captura_tablero_distancia_real_vs_optima_url_my_difuminado.png" alt="Captura de rutas de trabajo">
-        <img src="../assets/img/Captura_url_my_difuminado.png" alt="Otra imagen de rutas">
+  <!-- Navegación -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <a href="../index.html" class="logo-text">PN</a>
       </div>
-      <h4>URLs Maps (Ruta óptima)</h4>
-      <div class="contenedor-imagenes">
-        <img src="../assets/img/Captura_tablero_distancia_real_vs_optima_url_maps_difuminado.png" alt="Captura de rutas de trabajo">
-        <img src="../assets/img/Captura_url_maps_difuminado.png" alt="Otra imagen de rutas">
+      <div class="nav-links">
+        <a href="../index.html" class="nav-link">
+          <i class="fas fa-home"></i> Inicio
+        </a>
+        <a href="../index.html#proyectos" class="nav-link">
+          <i class="fas fa-code"></i> Proyectos
+        </a>
       </div>
-      <h3>Seleccion de móvil por grafico de barras</h3>
-      <img src="../assets/img/Captura_tablero_distancia_real_vs_optima_difuminado_seleccion_en_grafico.png" alt="Captura del dashboard" style="max-width:100%;border-radius:8px;">
-      <h3>Seleccion por filtro de fecha</h3>
-      <img src="../assets/img/Captura_tablero_distancia_real_vs_optima_difuminado_seleccion_por_filtro_de_fechas.png" alt="Captura del dashboard" style="max-width:100%;border-radius:8px;">
-    </section>
-  </main>
+    </div>
+  </nav>
 
-  <footer>
-    <p>© 2025 Pablo Nadal</p>
+  <!-- Hero del proyecto -->
+  <section class="project-hero">
+    <div class="container">
+      <div class="project-hero-content">
+        <div class="project-hero-text">
+          <div class="project-badge">
+            <i class="fas fa-chart-line"></i>
+            <span>Power BI Dashboard</span>
+          </div>
+          <h1 class="project-title">Dashboard de Rutas de Trabajo</h1>
+          <p class="project-subtitle">Visualización inteligente de recorridos y métricas para optimización logística</p>
+          <div class="project-meta">
+            <div class="meta-item">
+              <i class="fas fa-calendar"></i>
+              <span>2024</span>
+            </div>
+            <div class="meta-item">
+              <i class="fas fa-clock"></i>
+              <span>3 meses</span>
+            </div>
+            <div class="meta-item">
+              <i class="fas fa-users"></i>
+              <span>Equipo técnico</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-hero-visual">
+          <div class="project-preview">
+            <img src="../assets/img/CTNET_3.png" alt="Dashboard Preview">
+            <div class="preview-overlay">
+              <i class="fas fa-play"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Descripción del proyecto -->
+  <section class="project-description">
+    <div class="container">
+      <div class="description-grid">
+        <div class="description-content">
+          <h2 class="section-title">
+            <span class="title-accent">Descripción</span> del Proyecto
+          </h2>
+          <p class="description-text">
+            Este proyecto consiste en el desarrollo de un dashboard interactivo con Power BI, diseñado para visualizar y analizar las rutas de trabajo efectivamente realizadas por los equipos técnicos. A través de la comparación entre estas rutas reales y las rutas óptimas definidas por Google Maps, la herramienta permite identificar ineficiencias logísticas y estimar el desperdicio de combustible generado por desvíos innecesarios o decisiones subjetivas en el recorrido.
+          </p>
+          <div class="project-features">
+            <div class="feature-item">
+              <i class="fas fa-route"></i>
+              <div>
+                <h4>Análisis de Rutas</h4>
+                <p>Comparación entre rutas reales vs óptimas</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-gas-pump"></i>
+              <div>
+                <h4>Optimización de Combustible</h4>
+                <p>Estimación de desperdicio por desvíos</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-chart-bar"></i>
+              <div>
+                <h4>Métricas en Tiempo Real</h4>
+                <p>Dashboard interactivo con filtros dinámicos</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tech-stack">
+          <h3 class="tech-title">Tecnologías Utilizadas</h3>
+          <div class="tech-grid">
+            <div class="tech-item">
+              <i class="fab fa-microsoft"></i>
+              <span>Power BI</span>
+            </div>
+            <div class="tech-item">
+              <i class="fab fa-python"></i>
+              <span>Python (ETL)</span>
+            </div>
+            <div class="tech-item">
+              <i class="fas fa-map-marked-alt"></i>
+              <span>Google Maps API</span>
+            </div>
+            <div class="tech-item">
+              <i class="fas fa-database"></i>
+              <span>MyGeotab</span>
+            </div>
+            <div class="tech-item">
+              <i class="fas fa-table"></i>
+              <span>Pandas</span>
+            </div>
+            <div class="tech-item">
+              <i class="fas fa-server"></i>
+              <span>SQL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galería de capturas -->
+  <section class="project-gallery">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="title-accent">Capturas</span> del Proyecto
+      </h2>
+      <p class="gallery-description">
+        En esta sección se muestran capturas del dashboard y de las rutas de trabajo, tanto reales como óptimas, junto con ejemplos de selección de móviles y filtros de fecha.
+      </p>
+      
+      <div class="gallery-grid">
+        <div class="gallery-item featured">
+          <div class="gallery-image">
+            <img src="../assets/img/Captura_tablero_distancia_real_vs_optima_difuminado.png" alt="Dashboard principal">
+            <div class="image-overlay">
+              <div class="overlay-content">
+                <h4>Dashboard Principal</h4>
+                <p>Vista completa del sistema de análisis</p>
+                <button class="view-btn" onclick="openLightbox(this)">
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-section">
+          <h3 class="gallery-section-title">
+            <i class="fas fa-route"></i>
+            URLs MyGeotab (Ruta Real)
+          </h3>
+          <div class="gallery-row">
+            <div class="gallery-item">
+              <div class="gallery-image">
+                <img src="../assets/img/Captura_tablero_distancia_real_vs_optima_url_my_difuminado.png" alt="Rutas de trabajo MyGeotab">
+                <div class="image-overlay">
+                  <button class="view-btn" onclick="openLightbox(this)">
+                    <i class="fas fa-expand"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <div class="gallery-image">
+                <img src="../assets/img/Captura_url_my_difuminado.png" alt="Rutas de trabajo MyGeotab">
+                <div class="image-overlay">
+                  <button class="view-btn" onclick="openLightbox(this)">
+                    <i class="fas fa-expand"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-section">
+          <h3 class="gallery-section-title">
+            <i class="fas fa-map-marked-alt"></i>
+            URLs Maps (Ruta Óptima)
+          </h3>
+          <div class="gallery-row">
+            <div class="gallery-item">
+              <div class="gallery-image">
+                <img src="../assets/img/Captura_tablero_distancia_real_vs_optima_url_maps_difuminado.png" alt="Rutas óptimas Maps">
+                <div class="image-overlay">
+                  <button class="view-btn" onclick="openLightbox(this)">
+                    <i class="fas fa-expand"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <div class="gallery-image">
+                <img src="../assets/img/Captura_url_maps_difuminado.png" alt="Rutas óptimas Maps">
+                <div class="image-overlay">
+                  <button class="view-btn" onclick="openLightbox(this)">
+                    <i class="fas fa-expand"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-section">
+          <h3 class="gallery-section-title">
+            <i class="fas fa-chart-bar"></i>
+            Selección de Móvil por Gráfico de Barras
+          </h3>
+          <div class="gallery-item">
+            <div class="gallery-image">
+              <img src="../assets/img/Captura_tablero_distancia_real_vs_optima_difuminado_seleccion_en_grafico.png" alt="Selección por gráfico">
+              <div class="image-overlay">
+                <div class="overlay-content">
+                  <h4>Interacción con Gráficos</h4>
+                  <p>Selección dinámica de móviles</p>
+                  <button class="view-btn" onclick="openLightbox(this)">
+                    <i class="fas fa-expand"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-section">
+          <h3 class="gallery-section-title">
+            <i class="fas fa-calendar-alt"></i>
+            Selección por Filtro de Fecha
+          </h3>
+          <div class="gallery-item">
+            <div class="gallery-image">
+              <img src="../assets/img/Captura_tablero_distancia_real_vs_optima_difuminado_seleccion_por_filtro_de_fechas.png" alt="Filtro de fechas">
+              <div class="image-overlay">
+                <div class="overlay-content">
+                  <h4>Filtros Temporales</h4>
+                  <p>Análisis por períodos específicos</p>
+                  <button class="view-btn" onclick="openLightbox(this)">
+                    <i class="fas fa-expand"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-content">
+      <button class="lightbox-close" onclick="closeLightbox()">
+        <i class="fas fa-times"></i>
+      </button>
+      <img src="" alt="" class="lightbox-image">
+      <div class="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-nav">
+          <a href="../index.html" class="footer-link">
+            <i class="fas fa-arrow-left"></i>
+            Volver al Portafolio
+          </a>
+          <a href="ruteo-inteligente.html" class="footer-link">
+            Siguiente Proyecto
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+        <p>&copy; 2025 Pablo Nadal. Hecho con ❤️ y mucho código.</p>
+      </div>
+    </div>
   </footer>
+
+  <script src="../script.js"></script>
+  <script src="proyecto-script.js"></script>
 </body>
 </html>
